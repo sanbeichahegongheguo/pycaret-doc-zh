@@ -12,7 +12,7 @@ description: 常见问题解答！
 
 <summary>为什么选择 PyCaret？</summary>
 
-简短的回答是，PyCaret 是一个开源的低代码机器学习库，构建在你喜爱的库和框架（如 _scikit-learn, xgboost, lightgbm 等）之上。机器学习实验需要大量迭代，PyCaret 的主要目标是让你能够以极快的速度进行迭代。与其他优秀的开源机器学习库相比，PyCaret 是一个替代低代码库，可以用几行代码取代数百行代码。试试看吧！
+简短的回答是，PyCaret 是一个开源的低代码机器学习库，构建在你喜爱的库和框架（如 scikit-learn, xgboost, lightgbm 等）之上。机器学习实验需要大量迭代，PyCaret 的主要目标是让你能够以极快的速度进行迭代。与其他优秀的开源机器学习库相比，PyCaret 是一个替代低代码库，可以用几行代码取代数百行代码。试试看吧！
 
 </details>
 
@@ -108,6 +108,7 @@ API 的使用方式没有变化，但在某些情况下，需要安装额外的�
 <details>
 
 <summary>PyCaret 是否保证端到端实验的可重现性？</summary>
+
 当然可以。如果没有可重现性的保证，任何框架都几乎没有用处。在任何机器学习工作流中，都有许多因素会导致随机性，比如`train_test_split`。有时，随机性也内置在算法中。一些例子包括随机森林(Random Forest)、极端随机树(Extra Trees)和梯度提升机(Gradient Boosting Machines)。为了确保您可以在以后的时间重现您的端到端实验，您必须在`setup`中传递`session_id`参数。
 
 **示例：**
@@ -205,6 +206,7 @@ os.environ["PYCARET_CUSTOM_LOGGING_LEVEL"] = "CRITICAL"
 <details>
 
 <summary>我可以只使用PyCaret进行数据预处理吗？</summary>
+
 是的，如果你愿意的话。你可以运行 `setup` 函数，该函数处理所有数据预处理，之后你可以使用 `get_config` 函数访问转换后的训练集和测试集。&#x20;
 
 **示例:**
